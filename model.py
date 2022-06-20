@@ -25,6 +25,7 @@ pd.set_option('display.float_format', lambda x: '%.3f' % x)
 pd.set_option('display.width', 500)
 
 
+
 def plot_confusion_matrix(y, y_pred):
     acc = round(accuracy_score(y, y_pred), 2)
     cm = confusion_matrix(y, y_pred)
@@ -74,7 +75,7 @@ lightgbm_params = {"learning_rate": [0.01, 0.1],
                    "colsample_bytree": [0.7, 1]}
 
 catboost_params = {"iterations": [200, 500],
-                   "learning_rate": [0.01, 0.1],
+                   "learning_rate": [0.01, 0.1, 1],
                    "depth": [3, 6]}
 
 classifiers = [('KNN', KNeighborsClassifier(), knn_params),
