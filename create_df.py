@@ -9,7 +9,6 @@ from sklearn.preprocessing import StandardScaler, RobustScaler
 from imblearn.over_sampling import SMOTE
 
 
-
 def prepare_dataset_fe(data):
     data.Attrition.replace(to_replace=dict(Yes=1, No=0), inplace=True)
 
@@ -90,7 +89,6 @@ def prepare_dataset_fe(data):
 
     #PCA
     #pca_df = eda.create_pca_df(X, y)
-
     #y = pca_df["Attrition"]
     #X = pca_df.drop(["Attrition"], axis=1)
     return X, y
